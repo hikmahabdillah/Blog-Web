@@ -7,13 +7,14 @@ function registerUser($email, $username, $password) {
   if (!$conn) return false;
 
   // Cek apakah email sudah terdaftar
-  $query = "SELECT * FROM Users WHERE email = :email";
+  $query = "SELECT * FROM Users WHERE email = :email OR username = :username";
   $stmt = $conn->prepare($query);
   $stmt->bindParam(':email', $email);
+  $stmt->bindParam(':username', $username);
   $stmt->execute();
 
   if ($stmt->fetch(PDO::FETCH_ASSOC)) {
-      return false; // Email sudah digunakan
+      return false; // Email / username sudah digunakan
   }
 
   // Hash password sebelum menyimpannya di database

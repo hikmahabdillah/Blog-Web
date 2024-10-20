@@ -6,16 +6,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
+  // Inisialisasi array untuk menampung respons
+  $response = [
+    'status' => 'error',
+    'message' => 'Email or Username has been used!'
+  ];
+
   if (registerUser($email, $username, $password)) {
-    echo "Pendaftaran berhasil! Silakan login.";
-    header("Location: ./login.php");
-    exit;
-  } else {
-    $error = "Email sudah digunakan atau terjadi kesalahan.";
-    include './views/registerForm.php';
-  }
+    $response['status'] = 'success';
+    $response['message'] = 'Register successful';
+  } 
+
+  echo json_encode($response);
+  exit;
 } else if (isUserLoggedIn()) {
   header("Location: ./");
+  exit;
 } else {
   include './views/registerForm.php';
 }

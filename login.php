@@ -2,18 +2,24 @@
 require_once './functions/auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
 
-    if (loginUser($email, $password)) {
-        header("Location: ./");
-        exit;
-    } else {
-        $error = "Email or Password is incorrect!";
-        include './views/loginForm.php';
-    }
-}else if(isUserLoggedIn()){
+  // Inisialisasi array untuk menampung respons
+  $response = [
+    'status' => 'error',
+    'message' => 'Email or Password is incorrect!'
+  ];
+
+  if (loginUser($email, $password)) {
+    $response['status'] = 'success';
+    $response['message'] = 'Login successful';
+  } 
+  echo json_encode($response);
+  exit;
+} else if (isUserLoggedIn()) {
   header("Location: ./");
+  exit;
 } else {
   include './views/loginForm.php';
 }
