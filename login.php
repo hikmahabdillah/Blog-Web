@@ -9,9 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: ./");
         exit;
     } else {
-        $error = "Email atau password salah!";
-        include './views/login.php';
+        $error = "Email or Password is incorrect!";
+        include './views/loginForm.php';
     }
+}else if(isUserLoggedIn()){
+  header("Location: ./");
 } else {
-  include './views/login.php';
+  include './views/loginForm.php';
 }
