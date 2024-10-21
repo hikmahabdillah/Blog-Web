@@ -42,6 +42,9 @@ function loginUser($email, $password){
         session_start();
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['user_id'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['profile_picture'] = $user['profile_picture'];
+        $_SESSION['created_at'] = $user['created_at'];
         return true;
     }
 
@@ -50,13 +53,19 @@ function loginUser($email, $password){
 
 // untuk cek apakah user sudah login
 function isUserLoggedIn() {
-  session_start();
+  // mengecek status session jika session belum di mulai
+  if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+  }
   return isset($_SESSION['user_id']);
 }
 
 // mengatasi logout
 function logoutUser() {
-  session_start();
+  // mengecek status session jika session belum di mulai
+  if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+  }
   session_unset();
   session_destroy();
   header("Location: ./");

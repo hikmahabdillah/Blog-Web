@@ -13,7 +13,8 @@ body{
 }
 
 .overlay{
-  background: url(../assets/img/background-overlay.jpg);
+  background: rgb(255,255,255);
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(57,149,207,1) 100%);
   min-height: 100vh;
   box-sizing: border-box;
   display:grid;
@@ -83,18 +84,27 @@ p {
   font-weight:500;
 }
 
-.btn-black {
+.btn {
   font-family: "Inter", sans-serif;
   width: 100%;
-  padding: 12px;
-  background-color: #1e1e1e;
-  color: #fff;
-  border: none;
+  padding: 12px 25px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.7s;
-  font-weight:600;
+  transition: all 0.5s;
+  font-weight:500;
+}
+
+.btn-black{
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+}
+
+.btn-white{
+  background-color: #fff;
+  color: #1e1e1e;
+  border: 1px solid #1e1e1e;
 }
 
 .btn-black:hover {
@@ -114,4 +124,60 @@ p {
 
 .linked-text a:hover {
   text-decoration: underline;
+}
+
+/* Navbar Styling */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+img.photo-profile{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit:cover;
+}
+
+.btn-write div{
+  display:flex;
+  gap:3px;
+  align-items: center;
+}
+
+a.btn-write{
+  text-decoration:none;
+  color: #1e1e1e;
 }

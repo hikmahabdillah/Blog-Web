@@ -13,7 +13,7 @@
     <div class="overlay">
         <img src="./assets/img/smillingManGreeting.png" alt="Logo" width="200px" class="illustration"> 
         <div class="box">
-            <div class="logo">
+            <div>
                 <img src="./assets/img/logoParticle.png" alt="Logo" width="80px"> 
             </div>
             <h2>Welcome Back!</h2>
@@ -29,7 +29,7 @@
                     placeholder="Password"
                     required>
                 </div>
-                <button type="submit" class="btn-black">Login</button>
+                <button type="submit" class="btn btn-black">Login</button>
             </form>
             <p class="linked-text">Don’t Have Any Account? <a href="./register.php">Register</a></p>
         </div>
