@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,32 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <h2>Register</h2>
-    <div id="hasil" style="color: red;"><!--Hasil akan ditampilkan di sini...--></div>
-    <form id="formRegister" action="./register.php" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
-        <label for="username">Username:</label>
-        <input type="username" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
-        <button type="submit">Register</button>
-        <span>Already have an account?</span><a href="./login.php"> Login</a>
-    </form>
+    <div class="overlay">
+        <img src="./assets/img/youngManWaving.png" alt="Logo" width="220px" class="illustration">
+        <div class="box">
+            <div class="logo">
+                <img src="./assets/img/logoParticle.png" alt="Logo" width="80px">
+            </div>
+            <h2>Let's get Started</h2>
+            <p>Create your account</p>
+            <div id="hasil" style="color: red;"><!--Hasil akan ditampilkan di sini...--></div>
+            <form id="formRegister" action="./register.php" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-black">Register</button>
+            </form>
+            <p class="linked-text">Already have an account? <a href="./login.php">Login</a></p>
+        </div>
+    </div>
     <script>
         $(document).ready(function() {
             $("#formRegister").submit(function(e) {
@@ -46,4 +60,5 @@
         });
     </script>
 </body>
+
 </html>

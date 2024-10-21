@@ -1,5 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   font-family: "Inter", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.overlay{
+  background: url(../assets/img/background-overlay.jpg);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display:grid;
+  place-items:center;
+}
+
+.box{
+  background: rgb(255,255,255);
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(165,215,242,1) 100%);
+  max-height: 600px;
+  border-radius: 25px;
+  max-width:400px;
+  width:100%;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position:relative;
+}
+
+form{
+  width:90%;
+  margin: auto;
+}
+
+.illustration{
+  position:absolute;
+  top:5%;
+  left:50%;
+  height:auto;
+  object-fit:cover;
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+/* untuk animasi up n down */
+@keyframes moveUpDown {
+  0%, 100% {
+      transform: translateY(0); /* Posisi awal dan akhir */
+  }
+  50% {
+      transform: translateY(-20px); /* Gambar bergerak ke atas */
+  }
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  color:#1e1e1e;
+  padding-right: 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight:500;
+}
+
+.btn-black {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  padding: 12px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.7s;
+  font-weight:600;
+}
+
+.btn-black:hover {
+  background-color: #444;
+}
+
+.linked-text {
+  margin-top: 20px;
+  color: #666;
+  font-weight:600;
+}
+
+.linked-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.linked-text a:hover {
+  text-decoration: underline;
 }
