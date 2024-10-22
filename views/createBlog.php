@@ -7,6 +7,7 @@
   <title>Create Your Blog</title>
   <link rel="stylesheet" href="./css/stylesFormBlog.css">
   <link rel="stylesheet" href="./css/styleNavbar.css">
+  <link rel="stylesheet" href="./css/styleOverlay.css">
   <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.2.0/ckeditor5.css" />
 
 </head>
@@ -23,7 +24,7 @@
         <div class="banner-section">
           <label for="blog-banner" class="blog-banner-label">Blog Banner</label>
           <div class="image-preview">
-            <img src="https://via.placeholder.com/300x150" alt="Blog Banner" id="banner-image">
+            <img src="./assets/img/banner.jpg" alt="Blog Banner" id="banner-image">
           </div>
           <input type="file" id="blog-banner" accept="image/*">
           <button type="button" class="choose-button">Choose a Picture</button>
@@ -55,13 +56,17 @@
 
         <!-- Action Buttons -->
         <div class="button-group">
-
-          <button type="button" class="cancel-button">Cancel</button>
+          <a href='./'>
+            <button type="button" class="cancel-button">Cancel</button>
+          </a>
           <button type="submit" class="publish-button">Publish</button>
         </div>
       </form>
     </div>
   </div>
+  <!-- profile user -->
+  <?php include './views/profileUser.php' ?>
+  <script src="./js/script.js"></script>
   <!-- CKEditor CDN -->
   <script type="importmap">
     {
@@ -79,8 +84,8 @@
       Italic,
       Font,
       Paragraph,
-      Heading,          
-  List              
+      Heading,
+      List
     } from 'ckeditor5';
 
     ClassicEditor

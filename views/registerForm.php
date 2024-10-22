@@ -20,13 +20,13 @@
             <p>Create your account</p>
             <div id="hasil" style="color: red;"><!--Hasil akan ditampilkan di sini...--></div>
             <form id="formRegister" action="./register.php" method="POST">
-                <div class="input-group">
+                <div class="input-group form-input">
                     <input type="email" name="email" placeholder="Email" required>
                 </div>
-                <div class="input-group">
+                <div class="input-group form-input">
                     <input type="username" name="username" placeholder="Username" required>
                 </div>
-                <div class="input-group">
+                <div class="input-group form-input">
                     <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <button type="submit" class="btn btn-black">Register</button>

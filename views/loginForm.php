@@ -20,11 +20,11 @@
             <p>Log in to your account</p>
             <div id="hasil" style="color: red;"><!--Hasil akan ditampilkan di sini...--></div>
             <form id="formLogin" action="./login.php" class="form" method="POST">
-                <div class="input-group">
+                <div class="input-group form-input">
 
                     <input type="email" name="email" placeholder="Email" required>
                 </div>
-                <div class="input-group">
+                <div class="input-group form-input">
                     <input type="password" name="password" 
                     placeholder="Password"
                     required>

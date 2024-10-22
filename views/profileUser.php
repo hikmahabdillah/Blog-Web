@@ -28,20 +28,20 @@
                     <hr>
                     <div id='hasil' style='color: red;'><!--Hasil akan ditampilkan di sini...--></div>
                     <form id='updateProfile' action='./updateProfile.php' class='form' method='POST' enctype='multipart/form-data'>
-                        <div class='input-group'>
+                        <div class='input-group profile-input'>
                             <label for='username'>Username</label>
                             <input type='text' name='username' value='" . htmlspecialchars($username) . "' placeholder='Username' required>
                         </div>
-                        <div class='input-group'>
+                        <div class='input-group profile-input'>
                             <label for='email'>Email</label>
                             <input type='email' name='email' value='" . htmlspecialchars($email) . "' placeholder='Email' required>
                         </div>
-                        <div class='input-group'>
+                        <div class='input-group profile-input'>
                             <label for='photo-upload'>Photo</label>
                             <input type='file' id='photo-upload' name='photo-upload' class='file-input' accept='image/*'>
                             <!-- <label for='photo-upload' class='change-photo-btn'>Change photo</label> -->
                         </div>
-                        <div class='flex-btn'>
+                        <div class='flex-btn btn-profile'>
                             <button type='button' class='btn btn-white' id='cancelButton'>Cancel</button>
                             <button type='submit' class='btn btn-black'>Save Changes</button>
                         </div>
