@@ -1,0 +1,127 @@
+/* Navbar Styling */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.circle:hover img.photo-profile {
+  transform: rotate(20deg) scale(1.1);
+}
+
+img.photo-profile {
+  height: 100%;
+  image-rendering: crisp-edges;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.btn-write div {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+a.btn-write {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+/* style untuk profile popover */
+.card-active {
+  display: block !important;
+}
+
+.profile-card {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  max-width: 300px;
+  z-index: 10;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Gaya untuk item di dalam profile card */
+.profile-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile-card p {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.profile-card .menu-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.profile-card .menu-item img {
+  margin-right: 10px;
+}
+
+.profile-card .logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-card .logout a {
+  color: red !important;
+  margin-top: 15px !important;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}

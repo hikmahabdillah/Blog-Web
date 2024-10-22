@@ -1,3 +1,7 @@
+<?php
+require_once './functions/auth.php';
+require_once './functions/users.php';
+?>
 <header>
   <nav class="navbar">
     <div class="logo">
@@ -16,7 +20,7 @@
       } else {
         $userId = $_SESSION['user_id'];
         $userData = getUser($userId);
-        echo "<a href='#' class='btn-write'>
+        echo "<a href='./create-blog.php' class='btn-write'>
         <div>
           <img src='./assets/img/write.png' width='32px' alt=''><span>Write</span>
         </div>
