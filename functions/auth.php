@@ -42,9 +42,6 @@ function loginUser($email, $password){
         session_start();
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['user_id'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['profile_picture'] = $user['profile_picture'];
-        $_SESSION['created_at'] = $user['created_at'];
         return true;
     }
 

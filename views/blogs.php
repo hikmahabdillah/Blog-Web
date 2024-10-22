@@ -1,5 +1,6 @@
 <?php
 require_once './functions/auth.php';
+require_once './functions/users.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +15,7 @@ require_once './functions/auth.php';
 <body>
   <?php include './views/navbar.php' ?>
   <div class="" style="height:1000px"></div>
+  <?php include './views/profileUser.php' ?>
   <script src="./js/script.js"></script>
 </body>
 

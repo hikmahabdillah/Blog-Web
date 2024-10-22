@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="overlay">
+    <div class="bg-overlay bg-gradient">
         <img src="./assets/img/smillingManGreeting.png" alt="Logo" width="200px" class="illustration"> 
-        <div class="box">
+        <div class="box box-gradient">
             <div>
                 <img src="./assets/img/logoParticle.png" alt="Logo" width="80px"> 
             </div>

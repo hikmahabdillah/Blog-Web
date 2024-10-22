@@ -14,13 +14,15 @@
         <button class='btn btn-white'>Register</button>
       </a>";
       } else {
+        $userId = $_SESSION['user_id'];
+        $userData = getUser($userId);
         echo "<a href='#' class='btn-write'>
         <div>
           <img src='./assets/img/write.png' width='32px' alt=''><span>Write</span>
         </div>
         </a>
         <div class='circle'>
-        <img class='photo-profile' src='./assets/profile-img/" . $_SESSION['profile_picture'] . "' width='50px' alt=''>
+        <img class='photo-profile' src='./assets/profile-img/" . $userData['profile_picture'] . "' width='50px' alt=''>
         </div>
         ";
       }
@@ -31,10 +33,10 @@
   if(isUserLoggedIn()){
   echo "
   <div class='profile-card'>
-    <h3>". $_SESSION['username'] ."</h3>
-    <p>". $_SESSION['email'] ."</p>
+    <h3>". $userData['username'] ."</h3>
+    <p>". $userData['email'] ."</p>
     <hr>
-    <div class='menu-item'>
+    <div class='menu-item' id='menu-profile'>
       <img src='./assets/img/UserProfile.svg' width='30px' alt=''> Profile
     </div>
     <div class='menu-item'>

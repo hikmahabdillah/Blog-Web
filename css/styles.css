@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
@@ -12,26 +13,39 @@ body {
   margin: 0 auto;
 }
 
-.overlay {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(57, 149, 207, 1) 100%
-  );
+.bg-overlay {
   min-height: 100vh;
   box-sizing: border-box;
   display: grid;
   place-items: center;
 }
 
-.box {
+.bg-gradient {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 1) 0%,
-    rgba(165, 215, 242, 1) 100%
+    rgba(57, 149, 207, 1) 100%
   );
+}
+
+.bg-black {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: none;
+  place-items: center;
+  background: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.box {
   max-height: 600px;
   border-radius: 25px;
   max-width: 400px;
@@ -42,9 +56,28 @@ body {
   position: relative;
 }
 
+.box-gradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(165, 215, 242, 1) 100%
+  );
+}
+
+.box-white {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
 form {
-  width: 90%;
+  width: 100%;
   margin: auto;
+}
+
+form#formLogin,
+form#formLogin {
+  width: 90%;
 }
 
 .illustration {
@@ -80,6 +113,15 @@ p {
 .input-group {
   margin-bottom: 20px;
   position: relative;
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+
+.input-group label{
+  font-weight: 600;
+  width: 100px;
+  text-align: start;
 }
 
 .input-group input {
@@ -88,9 +130,10 @@ p {
   color: #1e1e1e;
   padding-right: 40px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #656464;
   font-size: 16px;
   font-weight: 500;
+  flex: 1;
 }
 
 .btn {
@@ -102,6 +145,7 @@ p {
   cursor: pointer;
   transition: all 0.5s;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .btn-black {
@@ -139,7 +183,7 @@ p {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .navbar {
@@ -185,6 +229,12 @@ img.photo-profile {
   width: 50px;
   height: 50px;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.circle-lg {
+  width: 70px;
+  height: 70px;
 }
 
 .circle:hover img.photo-profile {
@@ -203,22 +253,22 @@ a.btn-write {
 }
 
 /* style untuk profile popover */
-.card-active{
-  display:block!important;
+.card-active {
+  display: block !important;
 }
 
-/* Menyembunyikan kartu profil secara default */
 .profile-card {
   display: none;
   position: absolute;
-  top: 90px; /* Di bawah elemen yang di-hover */
+  top: 90px;
   right: 10px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 200px;
+  max-width: 300px;
   z-index: 10;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Gaya untuk item di dalam profile card */
@@ -245,19 +295,75 @@ a.btn-write {
   margin-right: 10px;
 }
 
-.profile-card .logout{
+.profile-card .logout {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.profile-card .logout a{
+.profile-card .logout a {
   color: red !important;
   margin-top: 15px !important;
 }
 
-.profile-card hr {
+hr {
   border: none;
   border-top: 1px solid #ddd;
 }
+
+.flex-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  margin-top:50px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  align-items: start;
+  height: max-content;
+}
+
+.minicard-profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  margin-bottom:10px;
+}
+
+.flex-col h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.flex-col p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+form#updateProfile{
+  margin-top:20px;
+}
+
+.file-input {
+  width:100%;
+}
+
+/* label.change-photo-btn {
+  width: max-content;
+  padding: 8px 12px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  white-space:nowrap;
+} */
