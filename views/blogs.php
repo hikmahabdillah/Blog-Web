@@ -12,14 +12,9 @@ require_once './functions/auth.php';
 </head>
 
 <body>
-  <?php include './views/navbar.php'?>
+  <?php include './views/navbar.php' ?>
   <div class="" style="height:1000px"></div>
-  <p>test</p>
-  <?php
-    if(isUserLoggedIn()){
-      echo "<a href='logout.php'>Logout</a>";
-    }
-  ?>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

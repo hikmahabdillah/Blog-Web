@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   margin: 0;
@@ -6,55 +6,64 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Inter", sans-serif;
   width: 100%;
   margin: 0 auto;
 }
 
-.overlay{
-  background: rgb(255,255,255);
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(57,149,207,1) 100%);
+.overlay {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(57, 149, 207, 1) 100%
+  );
   min-height: 100vh;
   box-sizing: border-box;
-  display:grid;
-  place-items:center;
+  display: grid;
+  place-items: center;
 }
 
-.box{
-  background: rgb(255,255,255);
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(165,215,242,1) 100%);
+.box {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(165, 215, 242, 1) 100%
+  );
   max-height: 600px;
   border-radius: 25px;
-  max-width:400px;
-  width:100%;
+  max-width: 400px;
+  width: 100%;
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  position:relative;
+  position: relative;
 }
 
-form{
-  width:90%;
+form {
+  width: 90%;
   margin: auto;
 }
 
-.illustration{
-  position:absolute;
-  top:5%;
-  left:50%;
-  height:auto;
-  object-fit:cover;
+.illustration {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  height: auto;
+  object-fit: cover;
   animation: moveUpDown 3s ease-in-out infinite;
 }
 
 /* untuk animasi up n down */
 @keyframes moveUpDown {
-  0%, 100% {
-      transform: translateY(0); /* Posisi awal dan akhir */
+  0%,
+  100% {
+    transform: translateY(0); /* Posisi awal dan akhir */
   }
   50% {
-      transform: translateY(-20px); /* Gambar bergerak ke atas */
+    transform: translateY(-20px); /* Gambar bergerak ke atas */
   }
 }
 
@@ -76,12 +85,12 @@ p {
 .input-group input {
   width: 100%;
   padding: 12px;
-  color:#1e1e1e;
+  color: #1e1e1e;
   padding-right: 40px;
   border-radius: 8px;
   border: none;
   font-size: 16px;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .btn {
@@ -92,16 +101,16 @@ p {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.5s;
-  font-weight:500;
+  font-weight: 500;
 }
 
-.btn-black{
+.btn-black {
   background-color: #1e1e1e;
   color: #fff;
   border: none;
 }
 
-.btn-white{
+.btn-white {
   background-color: #fff;
   color: #1e1e1e;
   border: 1px solid #1e1e1e;
@@ -114,7 +123,7 @@ p {
 .linked-text {
   margin-top: 20px;
   color: #666;
-  font-weight:600;
+  font-weight: 600;
 }
 
 .linked-text a {
@@ -127,7 +136,7 @@ p {
 }
 
 /* Navbar Styling */
-header{
+header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -164,20 +173,91 @@ header{
   gap: 20px;
 }
 
-img.photo-profile{
+img.photo-profile {
+  height: 100%;
+  image-rendering: crisp-edges;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.circle {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  object-fit:cover;
+  overflow: hidden;
 }
 
-.btn-write div{
-  display:flex;
-  gap:3px;
+.circle:hover img.photo-profile {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.btn-write div {
+  display: flex;
+  gap: 3px;
   align-items: center;
 }
 
-a.btn-write{
-  text-decoration:none;
+a.btn-write {
+  text-decoration: none;
   color: #1e1e1e;
+}
+
+/* style untuk profile popover */
+.card-active{
+  display:block!important;
+}
+
+/* Menyembunyikan kartu profil secara default */
+.profile-card {
+  display: none;
+  position: absolute;
+  top: 90px; /* Di bawah elemen yang di-hover */
+  right: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 200px;
+  z-index: 10;
+}
+
+/* Gaya untuk item di dalam profile card */
+.profile-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile-card p {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.profile-card .menu-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.profile-card .menu-item img {
+  margin-right: 10px;
+}
+
+.profile-card .logout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-card .logout a{
+  color: red !important;
+  margin-top: 15px !important;
+}
+
+.profile-card hr {
+  border: none;
+  border-top: 1px solid #ddd;
 }
