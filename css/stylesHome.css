@@ -1,0 +1,142 @@
+.container {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.heading-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+a.blog-link {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.main-blog {
+  width: 100%;
+  height: 380px;
+  background-size: cover; background-position: center;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-background{
+  padding: 15px;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height:100%;
+  background: rgb(36,36,36);
+  background: rgb(36,36,36);
+background: linear-gradient(to top, rgba(36,36,36,1) 0%, rgba(97,97,97,0.6699054621848739) 28%, rgba(255,255,255,0) 100%);
+  position: relative;
+}
+
+.main-blog-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.title{
+  max-width: 85%;
+}
+
+.title h2, .title p{
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.author-date{
+  display: flex;
+  align-items:center;
+  gap: 10px;
+}
+
+img.author-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+img.author-image-small{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info{
+  display: flex;
+  flex-direction: column;
+  color: #fff!Important;
+}
+
+.author-info-small{
+  display: flex;
+  flex-direction: column;
+  color: #1e1e1e!Important;
+}
+
+.small-blog{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* max-width:350px; */
+}
+
+img.small-image{
+  width: 100%;
+  height: 250px;
+  object-fit:cover;
+  border-radius: 10px;
+}
+
+.small-blog-details{
+  padding:10px;
+}
+
+.grid-group{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  padding: 15px;
+}
+
+.footer-card{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-post{
+  display: flex;
+  align-items:center;
+  gap:5px;
+  border-radius:10px;
+  border: 1px solid #1e1e1e;
+  padding: 5px 15px;
+}
+
+.read-post img{
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+.read-post:hover img{
+  transform: rotate(45deg);
+}
+
+.read-post p{
+  font-weight:600;
+  margin-bottom: 0;
+}

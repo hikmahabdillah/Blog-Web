@@ -80,6 +80,7 @@
       }
     });
   </script>
+  <script src="./js/script.js"></script>
 
   <!-- CKEditor CDN -->
   <script type="importmap">
