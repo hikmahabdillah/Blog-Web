@@ -35,14 +35,17 @@ function getBlogById($idBlog)
   $conn = connectDatabase();
   if (!$conn) return null;
 
-  $query = "SELECT * FROM Blogs WHERE id = '$idBlog'";
+  $query = "SELECT b.*, u.username AS author_name, u.profile_picture
+  FROM blogs b
+  JOIN users u ON b.user_id = u.user_id
+  WHERE b.blog_id = '$idBlog'";
   $stmt = $conn->query($query);
 
   $blog = $stmt->fetch(PDO::FETCH_ASSOC);
   return $blog;
 }
 
-function insertBlog($user_id, $title, $category, $content, $image_blog)
+function insertBlog($user_id, $title, $category, $description, $content, $image_blog)
 {
   $conn = connectDatabase();
   if (!$conn) return false;
@@ -66,10 +69,10 @@ function insertBlog($user_id, $title, $category, $content, $image_blog)
 
     // Query untuk menambah semua data termasuk gambar
 
-    $query = "INSERT INTO Blogs (user_id, title, category, content, image_blog) VALUES ('$user_id', '$title', '$category', '$content', '$fileName')";
+    $query = "INSERT INTO Blogs (user_id, title, category, description, content, image_blog) VALUES ('$user_id', '$title', '$category', '$description','$content', '$fileName')";
   } else {
     // Jika file tidak diunggah, maka akan menambah semua data kecuali gambar
-    $query = "INSERT INTO Blogs (user_id, title, category, content) VALUES ('$user_id', '$title', '$category', '$content')";
+    $query = "INSERT INTO Blogs (user_id, title, category, description, content) VALUES ('$user_id', '$title', '$category', '$description', '$content')";
   }
 
   if ($conn->exec($query)) {

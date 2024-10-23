@@ -13,7 +13,7 @@ $latestBlog = $blogData[0];
   </div>
 
   <!-- Main Blog Section -->
-  <a href="#" class="blog-link">
+  <a href="detail-blog.php?blog_id=<?php echo $latestBlog['blog_id']; ?>" class="blog-link">
   <div class="main-blog" style="background-image: url('./assets/banner-img/<?php echo $latestBlog['image_blog']; ?>');">
     <div class="overlay-background">
       <div class="main-blog-details">
@@ -36,7 +36,7 @@ $latestBlog = $blogData[0];
 <!-- Smaller Blog Section -->
 <div class="grid-group">
   <?php foreach (array_slice($blogData, 1) as $blog) { ?>
-  <a href="#" class="blog-link">
+  <a href="detail-blog.php?blog_id=<?php echo $blog['blog_id']; ?>" class="blog-link">
     <div class="small-blog">
       <img src="./assets/banner-img/<?php echo $blog['image_blog']?>" class="small-image">
       <div class="small-blog-details">

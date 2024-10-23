@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+
+.container{
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  gap: 20px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.blog-info h1{
+  font-size: 2.5rem;
+}
+
+.blog-info p, .blog-info span{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #656464;
+}
+
+.blog-info p{
+  margin-top:8px;
+}
+
+.author-date{
+  display: flex;
+  align-items:center;
+  gap: 10px;
+}
+
+img.author-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+img.author-image-small{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info{
+  display: flex;
+  flex-direction: column;
+  color: #fff!Important;
+}
+
+.author-info-small{
+  display: flex;
+  flex-direction: column;
+  color: #1e1e1e!Important;
+}
+
+.author-info-small span.author-name{
+  font-weight: 600;
+}
+
+.blog-image{
+  width: 100%;
+  height: auto;
+  object-fit:cover;
+  border-radius: 10px;
+}
+
