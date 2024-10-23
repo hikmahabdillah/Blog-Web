@@ -38,7 +38,7 @@ function updateProfile($user_id, $username, $email, $profile_picture)
     $targetFilePath = $targetDirectory . $fileName;
 
     if (!move_uploaded_file($profile_picture['tmp_name'], $targetFilePath)) {
-      return false; // Gagal memindahkan file
+      return false; 
     }
 
     // Query untuk memperbarui semua data termasuk gambar
