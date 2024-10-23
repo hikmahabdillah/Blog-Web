@@ -27,7 +27,7 @@
             <img src="./assets/img/banner.jpg" alt="Blog Banner" id="banner-image">
           </div>
           <input type="file" id="blog-banner" accept="image/*">
-          <button type="button" class="choose-button">Choose a Picture</button>
+          <button type="button" class="choose-button" onclick="document.getElementById('blog-banner').click()">Choose a Picture</button>
         </div>
 
         <!-- Blog Title and Category -->

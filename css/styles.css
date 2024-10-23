@@ -223,6 +223,7 @@ img.photo-profile {
   height: 100%;
   image-rendering: crisp-edges;
   object-fit: cover;
+  object-position:center;
   transition: all 0.5s;
 }
 
@@ -354,12 +355,12 @@ form#updateProfile{
   margin-top:20px;
 }
 
-.file-input {
-  width:100%;
+/* .file-input {
+  display: none;
 }
 
-/* label.change-photo-btn {
-  width: max-content;
+label.change-photo-btn {
+  width: max-content!important;
   padding: 8px 12px;
   background-color: white;
   border: 2px solid #ccc;

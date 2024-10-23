@@ -27,4 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
         this.style.display = "none"; // Menyembunyikan overlay saat mengklik area overlay
       }
     });
+
+    // event untuk memunculkan thumbnail ketika memilih file
+    document.getElementById('blog-banner').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const imageUrl = URL.createObjectURL(file);
+        console.log(imageUrl)
+        document.getElementById('banner-image').src = imageUrl;
+      }
+    });
+
+    //event thumbnail utk change profile
+    document.getElementById('photo-upload').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const imageUrl = URL.createObjectURL(file);
+        console.log(imageUrl)
+        document.getElementById('photo-profile-thumbnail').src = imageUrl;
+      }
+    });
 });
