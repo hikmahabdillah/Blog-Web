@@ -40,7 +40,7 @@ function loginUser($email, $password){
      // Verifikasi password
     if ($user && password_verify($password, $user['password'])) {
         session_start();
-        $_SESSION['username'] = $user['username'];
+        // $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['user_id'];
         return true;
     }

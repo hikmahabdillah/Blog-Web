@@ -7,16 +7,19 @@ function getUser($user_id)
   $conn = connectDatabase();
   if (!$conn) return null;
 
+  // get semua data user
   $query = "SELECT * FROM Users WHERE user_id = '$user_id'";
   $stmt = $conn->query($query);
 
   return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
+// function untuk update profile
 function updateProfile($user_id, $username, $email, $profile_picture)
 {
   $conn = connectDatabase();
   if (!$conn) return false;
+
   // Cek apakah email atau username sudah terdaftar
   $query = "SELECT * FROM Users WHERE (email = '$email' OR username = '$username') AND user_id != '$user_id'";
   $stmt = $conn->query($query);
@@ -27,7 +30,10 @@ function updateProfile($user_id, $username, $email, $profile_picture)
 
   // Cek apakah file diunggah
   if ($profile_picture['error'] === UPLOAD_ERR_OK) {
+    // type file yang diijinkan
     $allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'];
+
+    // cek apakah type file dari imageblog tergolong dengan type yang diijinkan
     if (!in_array($profile_picture['type'], $allowedTypes)) {
       return false; // Format tidak diterima
     }
@@ -37,6 +43,7 @@ function updateProfile($user_id, $username, $email, $profile_picture)
     $fileName = basename($profile_picture['name']);
     $targetFilePath = $targetDirectory . $fileName;
 
+    // Jika pemindahan file gagal, akan mengembalikan false
     if (!move_uploaded_file($profile_picture['tmp_name'], $targetFilePath)) {
       return false; 
     }

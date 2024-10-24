@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 * {
   margin: 0;
@@ -30,22 +29,6 @@ body {
   );
 }
 
-.bg-black {
-  min-height: 100vh;
-  box-sizing: border-box;
-  display: none;
-  place-items: center;
-  background: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(8px);
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .box {
   max-height: 600px;
   border-radius: 25px;
@@ -71,14 +54,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-form {
-  width: 100%;
-  margin: auto;
-}
-
 form#formLogin,
 form#formRegister {
   width: 90%;
+  margin: 0 auto;
 }
 
 .illustration {
@@ -114,12 +93,12 @@ p {
 .input-group {
   margin-bottom: 20px;
   position: relative;
-  display:flex;
+  display: flex;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 }
 
-.input-group label{
+.input-group label {
   font-weight: 600;
   width: 100px;
   text-align: start;
@@ -131,15 +110,14 @@ p {
   color: #1e1e1e;
   padding-right: 40px;
   border-radius: 8px;
-  /* border: 1px solid #656464; */
-  border:none;
+  border: none;
   font-size: 16px;
   font-weight: 500;
   flex: 1;
 }
 
 .btn {
-  width:100%;
+  width: 100%;
   font-family: "Inter", sans-serif;
   padding: 12px 25px;
   border-radius: 8px;
@@ -181,56 +159,16 @@ p {
   text-decoration: underline;
 }
 
-/* Navbar Styling */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 50px;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 img.photo-profile {
   height: 100%;
   image-rendering: crisp-edges;
   object-fit: cover;
-  object-position:center;
+  object-position: center;
   transition: all 0.5s;
 }
 
 .circle {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -238,10 +176,6 @@ img.photo-profile {
 .circle-lg {
   width: 70px;
   height: 70px;
-}
-
-.circle:hover img.photo-profile {
-  transform: rotate(20deg) scale(1.1);
 }
 
 .btn-write div {
@@ -255,7 +189,6 @@ a.btn-write {
   color: #1e1e1e;
 }
 
-/* style untuk profile popover */
 .card-active {
   display: block !important;
 }
@@ -274,7 +207,6 @@ a.btn-write {
   font-family: "Poppins", sans-serif;
 }
 
-/* Gaya untuk item di dalam profile card */
 .profile-card h3 {
   margin: 0;
   font-size: 18px;
@@ -320,7 +252,7 @@ hr {
   align-items: center;
   justify-content: end;
   gap: 10px;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 .flex-col {
@@ -336,7 +268,7 @@ hr {
   align-items: center;
   padding: 10px;
   gap: 10px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .flex-col h3 {
@@ -351,22 +283,6 @@ hr {
   color: #555;
 }
 
-form#updateProfile{
-  margin-top:20px;
+form#updateProfile {
+  margin-top: 20px;
 }
-
-/* .file-input {
-  display: none;
-}
-
-label.change-photo-btn {
-  width: max-content!important;
-  padding: 8px 12px;
-  background-color: white;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  display: inline-block;
-  white-space:nowrap;
-} */
