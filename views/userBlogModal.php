@@ -29,7 +29,9 @@
                             </div>
                         </div>
                         <div class="delete-blog">
-                            <a href="deleteBlog.php?blog_id=<?php echo $blog['blog_id']; ?>" id="delete-blog">Delete</a>
+                            <a href="deleteBlog.php?blog_id=<?php echo $blog['blog_id']; ?>" 
+                            onclick="return confirm('Are you sure you want to delete this blog?')" 
+                            id="delete-blog">Delete</a>
                         </div>
                     </div>
                 </a>

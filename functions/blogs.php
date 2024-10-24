@@ -109,3 +109,17 @@ ORDER BY blogs.created_at DESC;";
 
   return $blogs;
 }
+
+function deleteBlog($blogId){
+  $conn = connectDatabase();
+  if (!$conn) return null;
+
+  $query = "DELETE FROM Blogs WHERE blog_id = '$blogId'";
+  $stmt = $conn->query($query);
+
+  if($stmt){
+    return true;
+  }
+
+  return false;
+}
