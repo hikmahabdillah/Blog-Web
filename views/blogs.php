@@ -12,10 +12,15 @@
 </head>
 
 <body>
+  <!-- navbar -->
   <?php include './views/navbar.php' ?>
+  <!-- card profile user -->
   <?php include './views/profileUser.php' ?>
+  <!-- display all blogs -->
   <?php include './views/allBlogs.php' ?>
+  <!-- card blog user -->
   <?php include './views/userBlogModal.php' ?>
+  
   <script src="./js/script.js"></script>
 </body>
 

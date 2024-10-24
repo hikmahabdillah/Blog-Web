@@ -13,34 +13,38 @@ require_once './functions/users.php';
     <div class="nav-buttons">
       <?php
       if (!isUserLoggedIn()) {
-        echo "<a href='./login.php'>
+      ?>
+        <a href='./login.php'>
         <button class='btn btn-black'>Login</button>
       </a>
       <a href='./register.php'>
         <button class='btn btn-white'>Register</button>
-      </a>";
-      } else {
+      </a>
+      <?php } else {
         $userId = $_SESSION['user_id'];
+
+        // get data user
         $userData = getUser($userId);
-        echo "<a href='./create-blog.php' class='btn-write'>
+      ?>
+        <a href='./create-blog.php' class='btn-write'>
         <div>
           <img src='./assets/img/write.png' width='32px' alt=''><span>Write</span>
         </div>
         </a>
         <div class='circle'>
-        <img class='photo-profile' src='./assets/profile-img/" . $userData['profile_picture'] . "' width='50px' alt=''>
+        <img class='photo-profile' src="<?php echo "./assets/profile-img/" . $userData['profile_picture'] . ""?>" width='50px' alt=''>
         </div>
-        ";
+        <?php
       }
       ?>
     </div>
   </nav>
   <?php
   if(isUserLoggedIn()){
-  echo "
+  ?>
   <div class='profile-card'>
-    <h3>". $userData['username'] ."</h3>
-    <p>". $userData['email'] ."</p>
+    <h3><?php echo $userData['username']?></h3>
+    <p><?php echo $userData['email']?></p>
     <hr>
     <div class='menu-item' id='menu-profile'>
       <img src='./assets/img/UserProfile.svg' width='30px' alt=''> Profile
@@ -52,6 +56,5 @@ require_once './functions/users.php';
       <p id='logout-menu'>Logout</p>
     </div>
   </div>
-  ";
-  }?>
+  <?php }?>
 </header>

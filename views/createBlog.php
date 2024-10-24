@@ -13,7 +13,9 @@
 </head>
 
 <body>
+  <!-- navbar -->
   <?php include './views/navbar.php' ?>
+
   <div class="container">
     <div class="form-container">
       <h1>Create Your Blog</h1>
@@ -66,8 +68,9 @@
       </form>
     </div>
   </div>
-  <!-- profile user -->
+  <!-- card profile user -->
   <?php include './views/profileUser.php' ?>
+  <!-- card blog user -->
   <?php include './views/userBlogModal.php' ?>
 
   <!-- untuk handle event show thumbnail -->

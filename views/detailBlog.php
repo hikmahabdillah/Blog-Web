@@ -23,7 +23,9 @@ if (isset($_GET['blog_id'])) {
 </head>
 
 <body>
+  <!-- navbar -->
   <?php include './views/navbar.php' ?>
+
   <div class="container">
     <div class="blog-info">
       <span><?php echo $blog['category']; ?></span>
@@ -42,7 +44,9 @@ if (isset($_GET['blog_id'])) {
       <?php echo $blog['content']; ?>
     </div>
   </div>
+  <!-- card profile user -->
   <?php include './views/profileUser.php' ?>
+  <!-- card blog user -->
   <?php include './views/userBlogModal.php' ?>
   <script src="./js/script.js"></script>
 </body>

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("overlay-profile").style.display = "grid";
   });
 
+  // event ketika menu blog user diklik, muncul overlay
   blogMenu.addEventListener("click", function () {
     document.getElementById("overlay-blogUser").style.display = "grid";
   });
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("overlay-profile").style.display = "none"; // Menyembunyikan overlay
     });
 
+  // event untuk close overlay
   document
     .getElementById("overlay-profile")
     .addEventListener("click", function (event) {
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+  // event untuk close overlay
   document
     .getElementById("overlay-blogUser")
     .addEventListener("click", function (event) {
