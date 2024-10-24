@@ -68,6 +68,8 @@
   </div>
   <!-- profile user -->
   <?php include './views/profileUser.php' ?>
+  <?php include './views/userBlogModal.php' ?>
+
   <!-- untuk handle event show thumbnail -->
   <script>
     // event untuk memunculkan thumbnail ketika memilih file

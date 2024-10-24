@@ -32,7 +32,7 @@ body {
 }
 
 .box-blog{
-  max-width: 500px!Important;
+  max-width: 550px!Important;
 }
 
 .box-white {
@@ -187,6 +187,7 @@ hr {
   display: flex;
   flex-direction: column;
   margin-top:10px;
+  gap:10px;
   height: 350px;
   overflow: auto;
 }
@@ -201,8 +202,9 @@ hr {
 }
 
 .card-blog img{
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  /* height: 100%; */
+  height: 120px;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -214,19 +216,34 @@ hr {
 .card-blog .text-blog-user p{
   font-weight: 500;
   margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 
 .card-blog .text-blog-user h2{
   font-weight: 600;
   margin-bottom: 4px;
-  line-height: 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
 }
 
-.delete p{
-  text-align: end;
+.delete-blog a{
+  display: block;
+  text-align: right!important;
   font-size: 1rem;
   color: red;
   margin-top:5px;
   text-decoration: underline;
   cursor: pointer;
+}
+
+a.blog-link{
+  text-decoration: none;
+  color: #1e1e1e;
 }

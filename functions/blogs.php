@@ -81,3 +81,31 @@ function insertBlog($user_id, $title, $category, $description, $content, $image_
     return false;
   }
 }
+
+function getBlogByUserId($userId)
+{
+  $conn = connectDatabase();
+  if (!$conn) return null;
+
+  $query = "SELECT blogs.blog_id, 
+       blogs.title, 
+	    blogs.description,
+       blogs.content, 
+       blogs.category, 
+       blogs.image_blog, 
+       blogs.created_at,
+       users.username AS author_name, 
+       users.profile_picture
+FROM blogs
+JOIN users ON blogs.user_id = users.user_id
+WHERE users.user_id = '$userId'
+ORDER BY blogs.created_at DESC;";
+  $stmt = $conn->query($query);
+
+  $blogs = [];
+  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $blogs[] = $row;
+  }
+
+  return $blogs;
+}

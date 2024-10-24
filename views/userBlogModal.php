@@ -2,46 +2,42 @@
     <div class="box box-white box-blog">
         <div>
             <?php
+            require_once './functions/blogs.php';
+
             if (isUserLoggedIn()) {
                 $userId = $_SESSION['user_id'];
 
-                $userData = getUser($userId);
+                $blogUser = getBlogByUserId($userId);
+
             ?>
                 <div class="minicard-profile">
                     <h2>Your Blogs</h2>
                 </div>
                 <hr>
                 <div class="card-blog-contain">
+                    <?php
+                         foreach($blogUser as $blog) { 
+                    ?>
+                    <a href="detail-blog.php?blog_id=<?php echo $blog['blog_id']; ?>" class="blog-link">
                     <div class="card-blog-user">
                         <div class="card-blog">
-                            <img src="https://i.pinimg.com/564x/05/7b/6d/057b6d055a74c3d1075edcf96dad7e18.jpg" class="image-blog-user" alt="" width="100px">
+                            <img src="./assets/banner-img/<?php echo $blog['image_blog'] ?>" class="image-blog-user" alt="" width="100px">
                             <div class="text-blog-user">
-                                <p>21 Oct 2024</p>
-                                <h2>Title</h2>
-                                <p>Description</p>
+                                <p><?php echo  date('d M Y', strtotime($blog['created_at'])) ?></p>
+                                <h2><?php echo $blog['title']; ?></h2>
+                                <p><?php echo $blog['description']; ?></p>
                             </div>
                         </div>
-                        <div class="delete">
-                            <p id="delete-blog">Delete</p>
+                        <div class="delete-blog">
+                            <a href="deleteBlog.php?blog_id=<?php echo $blog['blog_id']; ?>" id="delete-blog">Delete</a>
                         </div>
                     </div>
-                    <div class="card-blog-user">
-                        <div class="card-blog">
-                            <img src="https://i.pinimg.com/564x/05/7b/6d/057b6d055a74c3d1075edcf96dad7e18.jpg" class="image-blog-user" alt="" width="100px">
-                            <div class="text-blog-user">
-                                <p>21 Oct 2024</p>
-                                <h2>Title</h2>
-                                <p>Description</p>
-                            </div>
-                        </div>
-                        <div class="delete">
-                            <p id="delete-blog">Delete</p>
-                        </div>
-                    </div>
-                </div>
+                </a>
             <?php
+                }
             }
             ?>
+                </div>
         </div>
     </div>
 </div>

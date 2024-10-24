@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const profileCard = document.querySelector(".profile-card");
   const profileMenu = document.querySelector("#menu-profile");
   const blogMenu = document.querySelector("#menu-blogUser");
+  const deleteButtons = document.querySelectorAll('.delete-blog p');
 
   //event untuk memunculkan card profile
   profileImage.addEventListener("click", function () {
@@ -63,14 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }
     // menampilkan confirmasi untuk logout
-    document.getElementById('delete-blog').addEventListener('click', function() {
-      confirmDelete();
+    deleteButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        confirm("Are you sure you want to delete this blog?");
+      });
     });
-
-    function confirmDelete() {
-      const result = confirm("Are you sure you want to delete this blog?");
-      if (result) {
-          window.location.href = './deleteBlog.php'; 
-      }
-  }
+    
 });

@@ -43,6 +43,7 @@ if (isset($_GET['blog_id'])) {
     </div>
   </div>
   <?php include './views/profileUser.php' ?>
+  <?php include './views/userBlogModal.php' ?>
   <script src="./js/script.js"></script>
 </body>
 
