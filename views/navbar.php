@@ -4,10 +4,12 @@ require_once './functions/users.php';
 ?>
 <header>
   <nav class="navbar">
-    <div class="logo">
-      <img src="./assets/img/logoParticle.png" alt="MindPost Logo" width="70px">
-      <span>MindPost</span>
-    </div>
+    <a href="./">
+      <div class="logo">
+        <img src="./assets/img/logoParticle.png" alt="MindPost Logo" width="70px">
+        <span>MindPost</span>
+      </div>
+    </a>
     <div class="nav-buttons">
       <?php
       if (!isUserLoggedIn()) {
@@ -43,11 +45,11 @@ require_once './functions/users.php';
     <div class='menu-item' id='menu-profile'>
       <img src='./assets/img/UserProfile.svg' width='30px' alt=''> Profile
     </div>
-    <div class='menu-item'>
+    <div class='menu-item' id='menu-blogUser'>
       <img src='./assets/img/Blogs.svg' width='30px' alt=''> Your Blogs
     </div>
     <div class='logout'>
-      <a href='logout.php'>Logout</a>
+      <p id='logout-menu'>Logout</p>
     </div>
   </div>
   ";

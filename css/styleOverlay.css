@@ -31,6 +31,10 @@ body {
   position: relative;
 }
 
+.box-blog{
+  max-width: 500px!Important;
+}
+
 .box-white {
   background: #fff;
   font-family: "Poppins", sans-serif;
@@ -139,7 +143,7 @@ img.photo-profile {
   align-items: center;
   padding: 10px;
   gap: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .flex-col h3 {
@@ -177,4 +181,52 @@ label.change-photo-btn {
 hr {
   border: none;
   border-top: 1px solid #ddd;
+}
+
+.card-blog-contain{
+  display: flex;
+  flex-direction: column;
+  margin-top:10px;
+  height: 350px;
+  overflow: auto;
+}
+
+.card-blog{
+  display: flex;
+  align-items:start;
+  gap:10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #656464;
+}
+
+.card-blog img{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card-blog .text-blog-user{
+  text-align: left;
+}
+
+.card-blog .text-blog-user p{
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card-blog .text-blog-user h2{
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 15px;
+}
+
+.delete p{
+  text-align: end;
+  font-size: 1rem;
+  color: red;
+  margin-top:5px;
+  text-decoration: underline;
+  cursor: pointer;
 }

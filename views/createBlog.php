@@ -17,7 +17,7 @@
   <div class="container">
     <div class="form-container">
       <h1>Create Your Blog</h1>
-      <p class="subtitle">lorem ipsum dolor sit amet</p>
+      <p class="subtitle">Start your own blog and share your unique voice with the world!</p>
 
       <form method="POST" action="./insertBlog.php" enctype='multipart/form-data'>
         <!-- Blog Banner -->

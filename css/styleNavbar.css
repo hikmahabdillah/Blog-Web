@@ -15,9 +15,14 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+a .logo {
   display: flex;
   align-items: center;
+  color: #1e1e1e;
+}
+
+nav a{
+  text-decoration: none;
 }
 
 .logo img {
@@ -42,6 +47,11 @@ header {
   height: 50px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.circle-lg {
+  width: 70px;
+  height: 70px;
 }
 
 .circle:hover img.photo-profile {
@@ -116,9 +126,11 @@ a.btn-write {
   cursor: pointer;
 }
 
-.profile-card .logout a {
+.profile-card .logout p {
   color: red !important;
+  text-decoration: underline;
   margin-top: 15px !important;
+  font-size: 1rem;
 }
 
 hr {

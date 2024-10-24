@@ -9,7 +9,7 @@ $latestBlog = $blogData[0];
 <div class="container">
   <div class="heading-title">
     <h1>Read Some Blogs</h1>
-    <p class="subtitle">lorem ipsum dolor sit amet</p>
+    <p class="subtitle">Read some of our latest blogs and stay updated with the trending discussions!</p>
   </div>
 
   <!-- Main Blog Section -->
