@@ -7,8 +7,7 @@ Blog Web is a simple and interactive blogging platform that allows users to crea
 - **User Authentication**: Register and log in securely to manage your blogs.  
 - **Create & Manage Posts**: Write new blog posts, update existing ones, or delete them anytime.  
 - **User Profile Management**: Update and manage your personal information.  
-- **View Blog Details**: Access full content of each blog with a clean detail page.  
-- **Responsive Design**: Works smoothly on both desktop and mobile devices.  
+- **View Blog Details**: Access full content of each blog with a clean detail page.
 - **Session Handling**: Login sessions are secured with logout functionality.  
 
 ## Technologies Used
